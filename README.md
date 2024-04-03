@@ -11,3 +11,11 @@ The solutions ranked 11th and 16th in Track 5 (Video Surveillance for Motorcycle
 - python -m torch.distributed.launch --nproc_per_node 4 --master_port 9527 train_aux.py --workers 8 --device 0,1,2,3 --sync-bn --batch-size 8 --data Helmet/Helmet100.yaml --img 1920 1920 --cfg Helmet/BF-YOLOv7-Helmet.yaml --weights '' --project Helmet --name BF-YOLOv7-Helmet --hyp data/hyp.scratch.p6.yaml --epochs 350
 5. Uses PRB-FPN6-MSP model to fine tune the nine classes Helmet detector based on BF-YOLOv7_best.pt with 100 training videos and 100 validation videos:
 - python -m torch.distributed.launch --nproc_per_node 2 --master_port 9527 train_aux.py --workers 32 --device 0,1 --sync-bn --batch-size 12 --data Helmet/Helmet100.yaml --img 1920 1920 --cfg Helmet/PRB-FPN6-MSP-Helmet.yaml --weights Helmet/BF-YOLOv7_best.pt --project Helmet --name PRB-FPN6-MSP-Helmet --hyp data/hyp.scratch.p6.yaml --epochs 100
+11. Rank 16: Test BF-YOLOv7_best.pt nine classes Helmet detector
+- Download [BF-YOLOv7_best.pt nine classes Helmet detector model](https)
+- python detect_Helmet.py --source /data/aicity2024/T5/track5_test/test100/images --weights Helmet/BF-YOLOv7_best.pt --conf 0.0001 --iou-thres 0.5 --img-size 1920 --device 3
+12. Rank 11: Test PRB-FPN6-MSP-FT_best.pt nine classes Helmet detector
+- Download [PRB-FPN6-MSP-FT_best.pt nine classes Helmet detector model](https)
+- python detect_Helmet.py --source /data/aicity2024/T5/track5_test/test100/images --weights Helmet/PRB-FPN6-MSP-FT_best.pt --conf 0.0001 --iou-thres 0.4625 --img-size 1920 --device 3
+# Environment
+Please refer to [YOLOv7](https://github.com/WongKinYiu/yolov7) Installation
