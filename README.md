@@ -9,5 +9,5 @@ The solutions ranked 11th and 16th in Track 5 (Video Surveillance for Motorcycle
 - python GTxywh2yolo.py (Please see [AICITY2023_Track5_DVHRM] (https://github.com/cmtsai2023/AICITY2023_Track5_DVHRM)
 4. Uses BF-YOLOv7 model to train the nine classes Helmet detector with 100 training videos and 100 validation videos:
 - python -m torch.distributed.launch --nproc_per_node 4 --master_port 9527 train_aux.py --workers 8 --device 0,1,2,3 --sync-bn --batch-size 8 --data Helmet/Helmet100.yaml --img 1920 1920 --cfg Helmet/BF-YOLOv7-Helmet.yaml --weights '' --project Helmet --name BF-YOLOv7-Helmet --hyp data/hyp.scratch.p6.yaml --epochs 350
-Uses PRB-FPN6-MSP model to fine tune the nine classes Helmet detector based on BF-YOLOv7_best.pt with 100 training videos and 100 validation videos:
+5. Uses PRB-FPN6-MSP model to fine tune the nine classes Helmet detector based on BF-YOLOv7_best.pt with 100 training videos and 100 validation videos:
 - python -m torch.distributed.launch --nproc_per_node 2 --master_port 9527 train_aux.py --workers 32 --device 0,1 --sync-bn --batch-size 12 --data Helmet/Helmet100.yaml --img 1920 1920 --cfg Helmet/PRB-FPN6-MSP-Helmet.yaml --weights Helmet/BF-YOLOv7_best.pt --project Helmet --name PRB-FPN6-MSP-Helmet --hyp data/hyp.scratch.p6.yaml --epochs 100
