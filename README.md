@@ -1,5 +1,5 @@
 # AICITY2024_Track5_UT
-The solutions ranked 11th and 16th in Track 5 (Video Surveillance for Motorcycle Helmet Compliance: A Bi-Fusion YOLOv7 Approach with PRBNet Fine-tuning) of the NVIDIA AI City Challenge at the CVPR 2024 Workshop.
+The solutions ranked 11th and 16th in Track 5 (Video Surveillance for Motorcycle Helmet Compliance: A PRBNet Fine-tuning Approach) of the NVIDIA AI City Challenge at the CVPR 2024 Workshop.
 
 # Solution pipelines
 1. Download the training_videos from [track5 of AI CIty Challenge](http://www.aicitychallenge.org/2024-track5-download/)
