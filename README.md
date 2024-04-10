@@ -1,4 +1,4 @@
-# AICITY2024_Track5_UT
+# ICPR_UT
 The solutions ranked 11th and 16th in Track 5 (Video Surveillance for Motorcycle Helmet Compliance: A PRBNet Fine-tuning Approach) of the NVIDIA AI City Challenge at the CVPR 2024 Workshop.
 
 # Solution pipelines
