@@ -15,10 +15,10 @@ The solutions ranked 11th and 16th in Track 5 of the NVIDIA AI City Challenge.
 7. Extracts images from Track 5 testing_videos: 
 - bash ./run_extract_test_frames.sh (Please see [AICITY2023_Track5_DVHRM] (https://github.com/cmtsai2023/AICITY2023_Track5_DVHRM)
 8. Rank 16: Test BF-YOLOv7_best.pt nine classes Helmet detector
-- Download [BF-YOLOv7_best.pt nine classes Helmet detector model](https)
+- Download [BF-YOLOv7_best.pt nine classes Helmet detector model](https://drive.google.com/file/d/10UP4De9QZjthfObeeXsMolqZ0PYnnaDA/view?usp=sharing)
 - python detect_Helmet.py --source /data/aicity2024/T5/track5_test/test100/images --weights Helmet/BF-YOLOv7_best.pt --conf 0.0001 --iou-thres 0.5 --img-size 1920 --device 3
 9. Rank 11: Test PRB-FPN6-MSP-FT_best.pt nine classes Helmet detector
-- Download [PRB-FPN6-MSP-FT_best.pt nine classes Helmet detector model](https)
+- Download [PRB-FPN6-MSP-FT_best.pt nine classes Helmet detector model]([https](https://drive.google.com/file/d/18tv8Cvu0VvpUaajZSK--Y_mIKe6K3jHj/view?usp=sharing))
 - python detect_Helmet.py --source /data/aicity2024/T5/track5_test/test100/images --weights Helmet/PRB-FPN6-MSP-FT_best.pt --conf 0.0001 --iou-thres 0.4625 --img-size 1920 --device 3
 # Environment
 Please refer to [YOLOv7](https://github.com/WongKinYiu/yolov7) Installation
